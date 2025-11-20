@@ -1,7 +1,7 @@
 # Better Feedback Survey Form
 
 A responsive survey form for collecting feedback from creators, builders, and hustlers.  
-This fulfills the freeCodeCamp **Survey Form** project requirements, but with copy tailored to your Better Endeavor / “trailblazer” branding.
+This fulfills the freeCodeCamp **Survey Form** project requirements, but with copy tailored to my Better Endeavor / “trailblazer” branding.
 
 ---
 
