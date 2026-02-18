@@ -1,96 +1,106 @@
 # Better Feedback Survey Form
 
-A responsive survey form for collecting feedback from creators, builders, and hustlers.  
-This fulfills the freeCodeCamp **Survey Form** project requirements, but with copy tailored to my Better Endeavor / “trailblazer” branding.
+A fully responsive survey form built with semantic HTML and modern CSS.  
+Designed to collect structured feedback from creators, builders, and entrepreneurs while demonstrating accessible form architecture and clean UI design.
+
+## Live Demo
+https://sharpsanders.github.io/survey-form/
+
+<img src="./img/Screenshot-survey-form.png" alt="Better Feedback Survey Form Screenshot">
 
 ---
 
 ## Overview
 
-The page contains:
+This project fulfills the freeCodeCamp **Survey Form** certification requirements, with custom copy and branding aligned to the Better Endeavors identity.
 
-- Title: **“Better Feedback, Better Vibes”**
-- Description explaining the purpose of the survey.
-- Form fields:
-  - Name (required)
-  - Email (required, with email validation)
-  - Age (optional number between 13 and 100)
-  - Role / current hustle (select dropdown)
-  - Recommendation rating (radio buttons)
-  - Interests (checkboxes, multi-select)
-  - Open-text feedback textarea
-- A full-width submit button: **“Send It ✨”**
+The form includes:
 
-No JavaScript is required; the form is focused on semantic HTML and clean CSS.
+- Page title and descriptive header
+- Required and optional input fields
+- Grouped radio and checkbox inputs
+- Accessible labels and fieldsets
+- Responsive layout optimized for mobile and desktop
+
+No JavaScript is used in this version. The focus is on semantic structure, accessibility, and clean visual hierarchy.
 
 ---
 
-## Form Fields
+## Form Structure
 
-1. **Name**  
-   - `type="text"`, required  
-   - `id="name"` for FCC tests
+### Required Inputs
+- **Name**  
+  `type="text"` — required  
+  `id="name"`
 
-2. **Email**  
-   - `type="email"`, required  
-   - `id="email"`
+- **Email**  
+  `type="email"` — required  
+  `id="email"`
 
-3. **Age**  
-   - `type="number"` with `min="13"` and `max="100"`  
-   - `id="number"`
+### Optional Input
+- **Age**  
+  `type="number"`  
+  `min="13"`  
+  `max="100"`  
+  `id="number"`
 
-4. **Role / Current Hustle**  
-   - `<select id="dropdown">` with options like:
-     - Student
-     - Freelancer
-     - Startup/Creator
-     - Other
+### Select Dropdown
+- Role / Current Hustle (`id="dropdown"`)
+  - Student
+  - Freelancer
+  - Startup / Creator
+  - Other
 
-5. **Recommendation** (radio group)  
-   - “Absolutely!”  
-   - “Maybe, needs some tweaks.”  
-   - “Nah, not my vibe.”
+### Recommendation (Radio Group)
+- Absolutely
+- Maybe, needs improvement
+- Not currently
 
-6. **Interests** (checkbox group)  
-   - Vending & Passive Income  
-   - Web Dev & SaaS Projects  
-   - Gaming & Streaming  
-   - Branding & Creative Strategy  
+### Interests (Checkbox Group)
+- Vending & Passive Income
+- Web Development & SaaS
+- Gaming & Streaming
+- Branding & Strategy
 
-7. **Comments**  
-   - `<textarea id="comments">` for open feedback.
+### Open Feedback
+- `<textarea id="comments">`
 
-The form uses labels correctly tied to inputs, and `fieldset` + `legend` for grouped questions.
-
----
-
-## Styling
-
-Core styling is in `styles.css`:
-
-- Centered layout with `max-width: 700px` and `margin: auto`.
-- Light grey background (`#f4f6fa`) with white form card.
-- Soft drop shadow and rounded corners for the form.
-- Segoe UI font across the page.
-- Accent colors:
-  - Heading: `#FF6B81`
-  - Label text: `#243B73`
-  - Button: `#FFD93D` (hover → `#00C2D1` with white text)
-
-Inputs and textarea are full-width, with consistent padding and border-radius.
+Grouped questions use proper `fieldset` and `legend` elements for improved accessibility and semantic clarity.
 
 ---
 
-## How to Use
+## Styling Approach
 
-1. Open the page in your browser.
-2. Fill out the fields (name + email required).
-3. Click **Send It ✨** to submit.
+Core styles are defined in `styles.css`.
 
-Currently the form doesn’t post to a backend; you can hook it up later to:
+Design principles applied:
 
-- An email service (Formspree, Netlify Forms, etc.), or
-- Your own API endpoint.
+- Centered layout with `max-width: 700px`
+- Neutral background with elevated white card
+- Soft drop shadow and rounded corners
+- Clean system font stack (Segoe UI)
+- Consistent spacing and visual rhythm
+
+Accent colors:
+- Heading: `#FF6B81`
+- Label text: `#243B73`
+- Primary button: `#FFD93D`
+- Button hover: `#00C2D1`
+
+Inputs and textareas are full-width with consistent padding and border-radius for usability and clarity.
+
+---
+
+## Technical Focus
+
+This project demonstrates:
+
+- Semantic HTML form structure
+- Proper label-to-input associations
+- Use of `fieldset` and `legend` for grouped inputs
+- Native browser validation using `required`, `min`, `max`, and `type="email"`
+- Mobile-first responsive layout
+- Clean separation between structure and presentation
 
 ---
 
@@ -98,25 +108,26 @@ Currently the form doesn’t post to a backend; you can hook it up later to:
 
 ```text
 survey-form/
-├── index.html   # Survey structure, labels, inputs, fieldsets
-└── styles.css   # Layout, colors, typography, button states
-What I Practiced
-Semantic HTML form structure (labels, fieldsets, legends).
+├── index.html
+└── styles.css
+Running Locally
+Clone the repository
 
-Accessible input labelling and grouping.
+Open index.html in your browser
 
-Basic validation with HTML attributes (required, min, max, type="email").
+No build tools or dependencies required.
 
-Responsive, centered card layout with clean visual hierarchy.
+Future Enhancements
+Add client-side validation feedback
 
-Future Improvements
-Add client-side validation + success/error messages.
+Integrate with a backend or form service (Netlify Forms, Formspree, etc.)
 
-Integrate with a backend to store responses.
+Add submission confirmation state
 
-Add small animations or success toast on submit.
+Conditional “Other” input field logic
 
-Add optional “Other” text field when certain choices are selected.
+Subtle UI transitions for improved UX
 
 Author
-Created by Trevyn Sanders.
+Created by Trevyn Sanders
+Better Endeavors LLC
